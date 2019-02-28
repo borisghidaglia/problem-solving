@@ -14,6 +14,9 @@ def solve(array):
     That is O(1). Finally, as long as we didn't returned something, we check if the min_val we
     found, plus 1, is in the array or not. If it is : we add one to our min value and we do the
     previous check again. If it is not, then it is our missing positive integer, thus we return it.
+    That is also O(n) in the worst case scenario.
+
+    That is why our total complexity is O(n)
     """
     pos_vals = set()
     min_val = None
