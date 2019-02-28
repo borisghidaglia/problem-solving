@@ -4,7 +4,7 @@ Daily Coding Problem is a mailing list for coding interview problems. Get except
 ## Problem number by company
 
 ### Google
-1
+1 - 3
 
 ### Uber
 2
