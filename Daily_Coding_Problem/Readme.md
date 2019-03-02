@@ -6,7 +6,7 @@ You have a coding interview incoming with one of those companies ? Check out the
 problem solving questions here !
 
 ### Google
-[1](./Google/1_are_two_nb_in_list_equals_to_k.py) - [3](./Google/3_binary_tree_serialize_deserialize.py)
+[1](./Google/1_are_two_nb_in_list_equals_to_k.py) - [3](./Google/3_binary_tree_serialize_deserialize.py) - [6](./Google/xor_linked_list.py)
 
 ### Jane Street
 [5](./Jane_Street/5_cons_car_cdr.py)
