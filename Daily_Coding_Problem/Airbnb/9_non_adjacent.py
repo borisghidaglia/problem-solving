@@ -33,7 +33,7 @@ def solve_linear(l):
     store[len(l)] = best
     return best
 
-# Iterative version linear time and constant space
+# Iterative dynamic programming version linear time and constant space
 def solve_linear_it(l):
     max_before = (None, None)
     max_bbefore = (None, None)
