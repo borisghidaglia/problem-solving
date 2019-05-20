@@ -33,28 +33,33 @@ def solve_linear(l):
     store[len(l)] = best
     return best
 
-# Iterative dynamic programming version linear time and constant space
+# Iterative version
 def solve_linear_it(l):
-    max_before = (None, None)
-    max_bbefore = (None, None)
+    max_before = None
+    max_bbefore = None
+    new_max = None
     for idx, elt in enumerate(l):
 
-        if not max_before[0]:
-            max_before = (elt, idx)
+        if idx == 0:
+            max_before = l[idx]
             continue
 
-        if not max_bbefore[0]:
-            if elt > max_before[0]:
-                max_before, max_bbefore = (elt, idx), max_before
-                continue
-            else: max_bbefore = max_before; continue
+        if idx == 1:
+            max_bbefore = max_before
+            max_before = max(l[idx], l[idx-1])
+            continue
 
-        if elt + max_before[0] > max_before[0] and idx - max_before[1] > 1:
-            max_before, max_bbefore = (max_before[0] + elt, idx), max_before
-        elif elt + max_bbefore[0] > max_before[0]:
-            max_before, max_bbefore = (elt + max_bbefore[0], idx), max_before
+        if not new_max:
+            new_max = max(max_before, max_bbefore + l[idx])
+            continue
 
-    return max_before[0]
+        max_bbefore = max_before
+        max_before = new_max
+
+        new_max = max(max_before, max_bbefore + l[idx])
+
+
+    return new_max
 
 
 assert solve([2, 4, 6, 2, 5]) == 13
